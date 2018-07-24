@@ -12,4 +12,4 @@ COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["ng serve --host=0.0.0.0"]
+CMD ["--host=0.0.0.0"]

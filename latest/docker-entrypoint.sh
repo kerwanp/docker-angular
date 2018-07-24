@@ -1,8 +1,7 @@
 #!/bin/sh
 set -e
 
-if [ "${1#-}" != "$1" ]; then
-	set -- "ng serve" "$@"
-fi
-
-exec "$@"
+su node
+npm install
+ng serve $1
+chown node:node -R $(pwd)
